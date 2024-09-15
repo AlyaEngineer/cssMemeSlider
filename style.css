@@ -54,7 +54,7 @@ body {
   .txt-list {   
     margin: 0;
     padding: 0;
-    width: 342px;
+    width: 341px;
     overflow: hidden;
   }
 
@@ -75,34 +75,46 @@ body {
   }
 
   .btn-wrapper {
-    display: inline;
+    display: flex;
   }
 
   .control-bar {
-    display: inline-block;
+    display: inline-flex;
+    width: 27px;
+    
   }
 
 /* Радио-кнопка */
-  .radio_input {
-    display: none;   
-    cursor: pointer;  
+
+  label {
+    cursor: pointer;
+    width: 27px;
+    height: 27px;
   }
 
+  label .radio_input {
+    display: none;    
+  }
 
-/* фейковая радио-кнопка с требуемой стилизацией */
+    /* Фейковая радио-кнопка с требуемой стилизацией */
   .custom-btn {  
-    display: inline-block;
+    display: block;
     width: 17px;
     height: 17px;
     background: rgb(72, 120, 162);
     border: 3px solid rgb(72, 120, 162);
     border-radius: 50%;
     cursor: pointer;
-    margin-left: 8px;
+    margin: auto;
+    margin-top: 5px;
+  }
+  
+  .control-bar:hover {
+    cursor: pointer;
   }
 
   .custom-btn:hover {
-    border: px solid #ccc;
+    border: 3px solid #ccc;
     background-color: #ccc;
     transition: all 1.3s ease;
   }
@@ -115,4 +127,9 @@ body {
   input[type="radio"]:checked + .custom-btn:hover {
     border-color: #ccc;
     transition: all 1.3s ease;
+  }
+
+  input[type="radio"]:hover + .custom-btn {
+    border: 3px solid #ccc;
+    background-color: #ccc;
   }

@@ -1,0 +1,12 @@
+@media screen and (min-width: 500px) and (max-width: 768px) {
+    .inner-container {
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 0 5%;  
+    }
+
+    .btn-wrapper {
+        align-self: center;
+        margin-bottom: 2em;
+    }
+}
