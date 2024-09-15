@@ -1,0 +1,158 @@
+body {
+    background-color: rgb(35, 32, 32);
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 3% 0;
+    width: 90%;
+    overflow: hidden;
+  }
+
+  .img-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 500%;
+    margin: 0 auto;
+    align-items: center;
+    transition: all 0.6s ease;
+  }  
+
+  .meme {
+    width: 20%;
+    height: auto;
+    border-radius: 15px;
+    transition: all 0.6s ease;
+  }
+
+  .inner-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5% 0;  
+  }
+
+  .txt-wrapper {
+     
+  }
+
+  .txt-list {   
+    margin: 0;
+    padding: 0;
+    width: 341px;
+    overflow: hidden;
+  }
+
+  .txt-point {
+    display: table-cell;
+    list-style-type: none;
+  }
+
+  .caption {
+    width: 341px;
+    color: #ccc;
+    text-align: left;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.06em;
+    font-weight: 400;
+    margin-top: 0;
+  }
+
+  .btn-wrapper {
+    display: flex;
+  }
+
+  .control-bar {
+    display: inline-flex;
+    width: 27px;
+    
+  }
+
+/* Радио-кнопка */
+
+  label {
+    cursor: pointer;
+    width: 27px;
+    height: 27px;
+  }
+
+  label .radio_input {
+    display: none;    
+  }
+
+    /* Фейковая радио-кнопка с требуемой стилизацией */
+  .custom-btn {  
+    display: block;
+    width: 17px;
+    height: 17px;
+    background: rgb(72, 120, 162);
+    border: 3px solid rgb(72, 120, 162);
+    border-radius: 50%;
+    cursor: pointer;
+    margin: auto;
+    margin-top: 5px;
+  }
+  
+  .control-bar:hover {
+    cursor: pointer;
+  }
+
+  .custom-btn:hover {
+    border: 3px solid #ccc;
+    background-color: #ccc;
+    transition: all .7s ease;
+  }
+
+  input[type="radio"]:checked + .custom-btn {
+    background-color: rgb(35, 32, 32);
+    border-color: rgb(72, 120, 162);
+    transition: all .7s ease;
+  }
+
+  input[type="radio"]:checked + .custom-btn:hover {
+    border-color: #ccc;
+    transition: all .7s ease;
+  }
+
+  input[type="radio"]:hover + .custom-btn {
+    border: 3px solid #ccc;
+    background-color: #ccc;
+    transition: all .7s ease;
+  }
+
+  input[type="radio"]:checked:hover + .custom-btn {
+    border: 3px solid #ccc;
+    background-color: rgb(35, 32, 32);
+    transition: all .7s ease;
+  }
+
+#btn1:checked ~ .img-wrapper {
+  transform: translate(0);
+ }
+ 
+ #btn2:checked ~ .img-wrapper {
+  transform: translate(-20%);
+ }
+ 
+ #btn3:checked ~ .img-wrapper {
+  transform: translate(-40%);
+ }
+ 
+ #btn4:checked ~ .img-wrapper {
+  transform: translate(-60%);
+ }
+
+ #btn5:checked ~ .img-wrapper {
+  transform: translate(-80%);
+}
