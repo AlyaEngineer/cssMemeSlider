@@ -44,18 +44,28 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 5% 5% 0;
-    
+    margin: 5% 5% 0;  
   }
 
   .txt-wrapper {
-    display: inline-block;
-    
+     
+  }
+
+  .txt-list {   
+    margin: 0;
+    padding: 0;
+    width: 342px;
+    overflow: hidden;
+  }
+
+  .txt-point {
+    display: table-cell;
+    list-style-type: none;
   }
 
   .caption {
-    width: inherit;
-    color: aliceblue;
+    width: 341px;
+    color: #ccc;
     text-align: left;
     font-family: "Titillium Web", sans-serif;
     font-size: 20px;
@@ -65,5 +75,44 @@ body {
   }
 
   .btn-wrapper {
-    
+    display: inline;
+  }
+
+  .control-bar {
+    display: inline-block;
+  }
+
+/* Радио-кнопка */
+  .radio_input {
+    display: none;   
+    cursor: pointer;  
+  }
+
+
+/* фейковая радио-кнопка с требуемой стилизацией */
+  .custom-btn {  
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background: rgb(72, 120, 162);
+    border: 3px solid rgb(72, 120, 162);
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 8px;
+  }
+
+  .custom-btn:hover {
+    border: px solid #ccc;
+    background-color: #ccc;
+    transition: all 1.3s ease;
+  }
+
+  input[type="radio"]:checked + .custom-btn {
+    background-color: rgb(35, 32, 32);
+    border-color: rgb(72, 120, 162);
+  }
+
+  input[type="radio"]:checked + .custom-btn:hover {
+    border-color: #ccc;
+    transition: all 1.3s ease;
   }
