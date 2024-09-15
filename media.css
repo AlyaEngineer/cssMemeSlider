@@ -2,7 +2,7 @@
     .inner-container {
         display: flex;
         flex-direction: column-reverse;
-        margin: 0 5%;  
+        margin: 0;  
     }
 
     .btn-wrapper {

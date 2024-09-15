@@ -15,35 +15,31 @@ body {
     flex-direction: column;
     margin: 0 auto;
     padding: 3% 0;
-    border: red solid 3px;
     width: 90%;
+    overflow: hidden;
   }
 
   .img-wrapper {
     display: flex;
     flex-direction: row;
-    width: 90%;
+    width: 500%;
     margin: 0 auto;
     align-items: center;
-    overflow: hidden;
+    transition: all 0.6s ease;
   }  
 
   .meme {
-    width: 100%;
+    width: 20%;
     height: auto;
     border-radius: 15px;
-    margin-right: 5%;
-  }
-
-  .meme:last-child {
-    margin-right: 0;
+    transition: all 0.6s ease;
   }
 
   .inner-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 5% 5% 0;  
+    margin: 5% 0;  
   }
 
   .txt-wrapper {
@@ -115,25 +111,48 @@ body {
   .custom-btn:hover {
     border: 3px solid #ccc;
     background-color: #ccc;
-    transition: all 1.3s ease;
+    transition: all .7s ease;
   }
 
   input[type="radio"]:checked + .custom-btn {
     background-color: rgb(35, 32, 32);
     border-color: rgb(72, 120, 162);
+    transition: all .7s ease;
   }
 
   input[type="radio"]:checked + .custom-btn:hover {
     border-color: #ccc;
-    transition: all 1.3s ease;
+    transition: all .7s ease;
   }
 
   input[type="radio"]:hover + .custom-btn {
     border: 3px solid #ccc;
     background-color: #ccc;
+    transition: all .7s ease;
   }
 
   input[type="radio"]:checked:hover + .custom-btn {
     border: 3px solid #ccc;
     background-color: rgb(35, 32, 32);
+    transition: all .7s ease;
   }
+
+#btn1:checked ~ .img-wrapper {
+  transform: translate(0);
+ }
+ 
+ #btn2:checked ~ .img-wrapper {
+  transform: translate(-20%);
+ }
+ 
+ #btn3:checked ~ .img-wrapper {
+  transform: translate(-40%);
+ }
+ 
+ #btn4:checked ~ .img-wrapper {
+  transform: translate(-60%);
+ }
+
+ #btn5:checked ~ .img-wrapper {
+  transform: translate(-80%);
+}
