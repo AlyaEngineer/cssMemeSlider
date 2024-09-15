@@ -1,3 +1,7 @@
+body {
+    background-color: rgb(35, 32, 32);
+}
+
 * {
     box-sizing: border-box;
   }
@@ -5,4 +9,61 @@
   html {
     scroll-behavior: smooth;
   }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 3% 0;
+    border: red solid 3px;
+    width: 90%;
+  }
+
+  .img-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+    overflow: hidden;
+  }
   
+
+  .meme {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-right: 5%;
+  }
+
+  .meme:last-child {
+    margin-right: 0;
+  }
+
+  .inner-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5% 5% 0;
+    
+  }
+
+  .txt-wrapper {
+    display: inline-block;
+    
+  }
+
+  .caption {
+    width: inherit;
+    color: aliceblue;
+    text-align: left;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.06em;
+    font-weight: 400;
+    margin-top: 0;
+  }
+
+  .btn-wrapper {
+    
+  }

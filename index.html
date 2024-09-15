@@ -3,11 +3,45 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
         <title>Meme Slider</title>
     </head>
     <body>
-        <div class="body-wrapper">
+        <div class="container">
+            <div class="img-wrapper">
+                <img src="./assets/images/boromir-vs-faramir.png" alt="boromir-vs-faramir" class="meme">
+                <img src="./assets/images/cockroach.png" alt="cockroach" class="meme">
+                <img src="./assets/images/healthy-food.png" alt="about-healthy-food" class="meme">
+                <img src="./assets/images/lisan-al-gaib.png" alt="lisan-al-gaib" class="meme">
+                <img src="./assets/images/wedding.png" alt="after-wedding" class="meme">
+            </div>
 
+            <div class="inner-container">
+                <div class="txt-wrapper">
+                    <p class="caption">Boromir vs Faramir</p>
+                    <p class="caption">Cockroach</p>
+                    <p class="caption">Healthy food through the cats' eyes</p>
+                    <p class="caption">Lisan Al Gaib</p>
+                    <p class="caption">After wedding</p>
+                </div>
+
+                <div class="btn-wrapper">
+                    <input type="radio" name="slider-btn" id="btn1" checked>
+                    <input type="radio" name="slider-btn" id="btn2">
+                    <input type="radio" name="slider-btn" id="btn3">
+                    <input type="radio" name="slider-btn" id="btn4">
+                    <input type="radio" name="slider-btn" id="btn5">
+                    <label for="btn1"></label>
+                    <label for="btn2"></label>
+                    <label for="btn3"></label>
+                    <label for="btn4"></label>
+                    <label for="btn5"></label>
+                </div>
+            </div>
+                
         </div>
     </body>
     </html>
