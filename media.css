@@ -1,0 +1,13 @@
+@media screen and (max-width: 768px) {
+    .inner-container {
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 0;  
+    }
+
+    .btn-wrapper {
+        align-self: center;
+        margin-bottom: 2em;
+        transform: translateY(-7.2em);
+    }
+}

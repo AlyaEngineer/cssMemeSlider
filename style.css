@@ -1,0 +1,148 @@
+body {
+    background-color: rgb(35, 32, 32);
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 3% 0;
+    width: 90%;
+    overflow: hidden;
+  }
+
+  .img-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 500%;
+    
+    margin: 0 auto;
+    transition: transform .5s ease;
+  }  
+
+  .slides { 
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+}
+
+  .meme {
+    display: block;
+    width: 20%;
+    border-radius: 0.938em;
+  }
+
+  .txt-wrapper {
+    display: inline-flex;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 6.25em;
+   
+  }
+
+  .caption {
+    width: 20%;
+    color: #ccc;
+    text-align: left;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 1.25em;
+    letter-spacing: 0.06em;
+    font-weight: 400;
+    margin-top: 0;
+  }
+
+  .btn-wrapper {
+    display: flex;
+    align-self: flex-end;
+    transform: translateY(-3.513em);
+    background-color: rgb(35, 32, 32);
+  }
+
+  /* Радио-кнопка */
+
+  label {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+  }
+
+  .radio_input {
+    display: none;    
+  }
+
+    /* Фейковая радио-кнопка с требуемой стилизацией */
+  .custom-btn {  
+    display: block;
+    width: 1.063em;
+    height: 1.063em;
+    background: rgb(72, 120, 162);
+    border: 0.188em solid rgb(72, 120, 162);
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0.7em;    
+  }
+  
+.custom-btn:hover {
+    border: 0.188em solid #ccc;
+    background-color: #ccc;
+    transition: all .7s ease;
+  }
+
+  /* при наведении на область вокруг радио кнопки, изменяется цвет радио кнопки */
+  label:hover .custom-btn{
+    cursor: pointer;
+    border: 0.188em solid #ccc;
+    background-color: #ccc;
+    transition: all .7s ease;
+  }
+
+
+   input:checked:nth-child(1) ~ .btn-wrapper #one,
+   input:checked:nth-child(2) ~ .btn-wrapper #two,
+   input:checked:nth-child(3) ~ .btn-wrapper #three,
+   input:checked:nth-child(4) ~ .btn-wrapper #four,
+   input:checked:nth-child(5) ~ .btn-wrapper #five {   
+    background-color: rgb(35, 32, 32);
+    border-color: rgb(72, 120, 162);
+    transition: all .7s ease;
+  }
+
+  input:checked:hover:nth-child(1) ~ .btn-wrapper #one,
+  input:checked:hover:nth-child(2) ~ .btn-wrapper #two,
+  input:checked:hover:nth-child(3) ~ .btn-wrapper #three,
+  input:checked:hover:nth-child(4) ~ .btn-wrapper #four,
+  input:checked:hover:nth-child(5) ~ .btn-wrapper #five {   
+   background-color: rgb(35, 32, 32);
+   border-color: #ccc;
+   transition: all .7s ease;
+ }
+
+  #btn1:checked ~ .img-wrapper {
+        transform: translate(0);
+  }
+  
+  #btn2:checked ~ .img-wrapper {
+    transform: translate(-20%);
+  }
+  
+  #btn3:checked ~ .img-wrapper {
+    transform: translate(-40%);
+  }
+  
+  #btn4:checked ~ .img-wrapper {
+    transform: translate(-60%);
+  }
+
+  #btn5:checked ~ .img-wrapper {
+    transform: translate(-80%);
+  }

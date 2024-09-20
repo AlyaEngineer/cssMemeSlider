@@ -1,0 +1,171 @@
+body {
+    background-color: rgb(35, 32, 32);
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 3% 0;
+    width: 90%;
+    overflow: hidden;
+  }
+
+  .img-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 500%;
+    margin: 0 auto;
+    align-items: center;
+    transition: transform .5s ease;
+  }  
+
+  .meme {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+
+  .inner-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5% 0;  
+  }
+
+  .txt-wrapper {
+    
+  }
+
+  .txt-list {   
+    margin: 0;
+    padding: 0;
+    width: 341px;
+    overflow: hidden;
+  }
+
+  .txt-point {
+    display: table-cell;
+    list-style-type: none;
+  }
+
+  .caption {
+    width: 341px;
+    color: #ccc;
+    text-align: left;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.06em;
+    font-weight: 400;
+    margin-top: 0;
+  }
+
+  .control-wrapper {
+
+  }
+
+.control-list {
+  display: inline-flex;
+  padding: 0;
+  margin: .5em 0;
+}
+
+.custom-btn {  
+  display: block;
+  list-style-type: none;
+  width: 1.063em;
+  height: 1.063em;
+  background: rgb(72, 120, 162);
+  border: 3px solid rgb(72, 120, 162);
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 .5em; 
+}
+.custom-btn:first-child {
+    margin-left: 0;
+}
+
+.custom-btn:last-child {
+    margin-right: 0;
+}
+
+  .custom-btn:hover {
+    border: 3px solid #ccc;
+    background-color: #ccc;
+    transition: all .7s ease;
+  }
+
+  .custom-btn:link {
+    border: 3px solid #ccc;
+    background-color: rgb(35, 32, 32);
+    transition: all .7s ease;
+  }
+
+
+
+
+  #meme1:target ~ ul li a[href="#meme1"],
+  #meme2:target ~ ul li a[href="#meme2"],
+  #meme3:target ~ ul li a[href="#meme3"],
+  #meme4:target ~ ul li a[href="#meme4"],
+  #meme5:target ~ ul li a[href="#meme5"] {
+    background: #be1e79;
+  }
+
+
+
+
+
+  input[type="radio"]:checked + .custom-btn {
+    background-color: rgb(35, 32, 32);
+    border-color: rgb(72, 120, 162);
+    transition: all .7s ease;
+  }
+
+  input[type="radio"]:checked + .custom-btn:hover {
+    border-color: #ccc;
+    transition: all .7s ease;
+  }
+
+  input[type="radio"]:hover + .custom-btn {
+    border: 3px solid #ccc;
+    background-color: #ccc;
+    transition: all .7s ease;
+  }
+
+  input[type="radio"]:checked:hover + .custom-btn {
+    border: 3px solid #ccc;
+    background-color: rgb(35, 32, 32);
+    transition: all .7s ease;
+  }
+
+  #btn1:checked ~ .img-wrapper {
+    transform: translate(0);
+  }
+  
+  #btn2:checked ~ .img-wrapper {
+    transform: translate(-20%);
+  }
+  
+  #btn3:checked ~ .img-wrapper {
+    transform: translate(-40%);
+  }
+  
+  #btn4:checked ~ .img-wrapper {
+    transform: translate(-60%);
+  }
+
+  #btn5:checked ~ .img-wrapper {
+    transform: translate(-80%);
+  }
+
+  

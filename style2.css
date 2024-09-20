@@ -1,0 +1,151 @@
+body {
+    background-color: rgb(35, 32, 32);
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .container {
+    display: flex;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 3% 0;    
+    
+  }
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+}
+
+  .img-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 500%;
+    margin: 0 auto;
+    align-items: center;
+    transition: transform .5s ease;
+    
+  }
+
+  .meme {
+    width: 20%;
+    height: auto;
+    border-radius: 0.9em;
+    position: relative;
+  }
+
+  .txt-wrapper {
+    display: inline-flex;
+  
+  }
+
+  .txt-list {   
+    margin: 0;
+    padding: 0;
+    width: 341px;
+    overflow: hidden;
+  }
+
+  .txt-point {
+    display: table-cell;
+    list-style-type: none;
+  }
+
+  .caption {
+    width: 341px;
+    color: #ccc;
+    text-align: left;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.06em;
+    font-weight: 400;
+    margin-top: 0;
+  }
+
+  .slider-nav {
+display: inline-flex;
+  }
+
+  /* Радио-кнопка */
+
+  label {
+    display: flex;
+    cursor: pointer;
+    width: 1.875em;
+    height: 1.875em;
+    border-radius: 50%;
+  }
+
+.radio_input {
+       display: none;
+  }
+
+   /* Фейковая радио-кнопка с требуемой стилизацией */
+   .custom-btn {  
+    display: inline-flex;
+    width: 1.063em;
+    height: 1.063em;
+    background: rgb(72, 120, 162);
+    border: 3px solid rgb(72, 120, 162);
+    border-radius: 50%;
+    cursor: pointer;
+    margin: auto;
+    margin-top: 5px;
+  }
+
+  .custom-btn:hover {
+    border: 0.188em solid #ccc;
+    background-color: #ccc;
+    transition: all .7s ease;
+    cursor: pointer;
+  }
+
+/* параметры активной фейковой кнопки .custom-btn */
+  input[type="radio"]:checked + .custom-btn {
+    background-color: rgb(35, 32, 32);
+    transition: all .7s ease;
+  }
+
+  
+  /* параметры активной фейковой кнопки .custom-btn при наведении мыши */
+  input[type="radio"]:checked:hover + .custom-btn {
+    border-color: #ccc;
+    background-color:  rgb(35, 32, 32);
+    transition: all .7s ease;
+  }
+
+  /* параметры НЕактивной фейковой  кнопки .custom-btn при наведении на нее курсора мыши */
+  input[type="radio"]:hover + .custom-btn {
+    border: 3px solid #ccc;
+    background-color: #ccc;
+    transition: all .7s ease;
+  }
+
+  #btn1:checked ~ .img-wrapper {
+    transform: translate(0);
+  }
+  
+  #btn2:checked ~ .img-wrapper {
+    transform: translate(-20%);
+  }
+  
+  #btn3:checked ~ .img-wrapper {
+    transform: translate(-40%);
+  }
+  
+  #btn4:checked ~ .img-wrapper {
+    transform: translate(-60%);
+  }
+
+  #btn5:checked ~ .img-wrapper {
+    transform: translate(-80%);
+  }
